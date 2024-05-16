@@ -1,24 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import Message from './Message.js'; 
+import Description from './Description.js';
 
-function App() {
+const App = () => {
+ 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  //Fragment: permite envolver lo que quere envolver en React sin necesidad de crear un elemento HTML
+    
+      <>
+        <Message color='blue' title='Estamos trabajando' />
+        <Message color='red' title='En un curso'/>
+        <Message color='yellow' title='De React'/>
+        <Description />
+      </>
   );
 }
 
